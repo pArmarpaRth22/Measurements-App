@@ -4,46 +4,53 @@ import i18n, { changeLanguage } from "../i18n";
 export default function LanguageToggle({ onChange }) {
   const switchLanguage = async (lang) => {
     await changeLanguage(lang);
-    onChange(); // re-render app
+    onChange();
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.wrapper}>
       <TouchableOpacity
-        style={[styles.button, i18n.locale === "en" && styles.activeButton]}
+        style={[styles.segment, i18n.locale === "en" && styles.activeSegment]}
         onPress={() => switchLanguage("en")}
       >
-        <Text style={styles.text}>English</Text>
+        <Text style={[styles.text, i18n.locale === "en" && styles.activeText]}>
+          EN
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.button, i18n.locale === "gu" && styles.activeButton]}
+        style={[styles.segment, i18n.locale === "gu" && styles.activeSegment]}
         onPress={() => switchLanguage("gu")}
       >
-        <Text style={styles.text}>ગુજરાતી</Text>
+        <Text style={[styles.text, i18n.locale === "gu" && styles.activeText]}>
+          ગુ
+        </Text>
       </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  wrapper: {
     flexDirection: "row",
-    marginBottom: 20,
+    backgroundColor: "#E5E7EB",
+    borderRadius: 999,
+    padding: 4,
   },
-  button: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    borderWidth: 1,
-    borderColor: "#333",
-    borderRadius: 6,
-    marginHorizontal: 5,
+  segment: {
+    paddingVertical: 6,
+    paddingHorizontal: 14,
+    borderRadius: 999,
   },
-  activeButton: {
-    backgroundColor: "#333",
+  activeSegment: {
+    backgroundColor: "#0F172A",
   },
   text: {
-    color: "#000",
+    fontSize: 13,
     fontWeight: "600",
+    color: "#6B7280",
+  },
+  activeText: {
+    color: "#FFFFFF",
   },
 });
