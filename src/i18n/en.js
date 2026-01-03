@@ -1,0 +1,15 @@
+export default {
+  appName: "Tailor Measurements",
+  addCustomer: "Add Customer",
+  customerName: "Customer Name",
+  mobileNumber: "Mobile Number",
+  save: "Save",
+  shirt: "Shirt",
+  pant: "Pant",
+  length: "Length",
+  shoulder: "Shoulder",
+  chest: "Chest",
+  waist: "Waist",
+  notes: "Notes",
+  selectLanguage: "Select Language",
+};

@@ -1,0 +1,15 @@
+export default {
+  appName: "દરજી માપ એપ",
+  addCustomer: "ગ્રાહક ઉમેરો",
+  customerName: "ગ્રાહકનું નામ",
+  mobileNumber: "મોબાઇલ નંબર",
+  save: "સેવ કરો",
+  shirt: "શર્ટ",
+  pant: "પેન્ટ",
+  length: "લંબાઈ",
+  shoulder: "ખભા",
+  chest: "છાતી",
+  waist: "કમર",
+  notes: "નોંધ",
+  selectLanguage: "ભાષા પસંદ કરો",
+};
