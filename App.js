@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import { setI18nConfig } from "./src/i18n";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import AppNavigator from "./src/navigation/AppNavigator";
+import { AuthProvider } from "./src/context/AuthContext";
 
 export default function App() {
   const [ready, setReady] = useState(false);
@@ -25,7 +26,9 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <AppNavigator />
+      <AuthProvider>
+        <AppNavigator />
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }

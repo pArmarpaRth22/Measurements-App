@@ -148,7 +148,7 @@ export default function HomeScreen({ navigation }) {
         </View>
 
         <View style={styles.revenueCard}>
-          <Text style={styles.statLabel}>{i18n.t("monthRevenue")}</Text>
+          <Text style={styles.statLabel}>{i18n.t("monthRevenue")}</Text>cd ..
           <Text style={styles.revenueValue}>₹ 42,500</Text>
         </View>
       </View>
